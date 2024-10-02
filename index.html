@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v8.22 WordCloud Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/trebuchet-ms-2"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-BtQk1yql.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJCGqbiM.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="clouds">
+        <div class="cloud-box">
+          <div class="inline-controls above">
+            <label>
+              <span>Height</span>
+              <input
+                id="txtHeight"
+                type="number"
+                min="200"
+                max="800"
+                step="100"
+                value="400"
+              />
+            </label>
+            <label>
+              <span>Spiral</span>
+              <select id="cmbSpiral">
+                <option selected>rectangular</option>
+                <option>square</option>
+                <option>archimedean</option>
+                <option>kustom</option>
+              </select>
+            </label>
+            <label>
+              <span>Placement</span>
+              <select id="cmbPlacement">
+                <option selected>center</option>
+                <option>random</option>
+              </select>
+            </label>
+            <label>
+              <span>Font Family</span>
+              <select id="cmbFontFamily">
+                <option selected>Trebuchet MS</option>
+                <option>Fira Sans</option>
+                <option>Roboto</option>
+                <option>arial</option>
+              </select>
+            </label>
+            <label>
+              <span>Font Thickness</span>
+              <div>
+                <input
+                  id="txtFontWeightMin"
+                  title="min"
+                  type="number"
+                  min="100"
+                  max="900"
+                  step="100"
+                  value="200"
+                />
+                <span>&mdash;</span>
+                <input
+                  id="txtFontWeightMax"
+                  title="max"
+                  type="number"
+                  min="100"
+                  max="900"
+                  step="100"
+                  value="900"
+                />
+              </div>
+            </label>
+            <label>
+              <span>Size Range</span>
+              <select id="cmbFontSizeRange">
+                <option value="1">x1</option>
+                <option value="2">x2</option>
+                <option value="3">x3</option>
+                <option value="4">x4</option>
+                <option value="5" selected>x5</option>
+                <option value="6">x6</option>
+                <option value="7">x7</option>
+                <option value="8">x8</option>
+                <option value="9">x9</option>
+                <option value="10">x10</option>
+              </select>
+            </label>
+            <button id="btnRedraw">Redraw</button>
+          </div>
+          <div class="cloud"></div>
+          <div class="inline-controls below">
+            <label>
+              <span>Top N</span>
+              <input
+                id="txtTopN"
+                type="number"
+                min="5"
+                max="100"
+                step="1"
+                value="50"
+              />
+            </label>
+            <label>
+              <span>Min Count</span>
+              <input
+                id="txtMinCount"
+                type="number"
+                min="1"
+                max="100"
+                step="1"
+                value="2"
+              />
+            </label>
+            <label>
+              <span>Min Length</span>
+              <input
+                id="txtMinLength"
+                type="number"
+                min="1"
+                max="100"
+                step="1"
+                value="3"
+              />
+            </label>
+          </div>
+        </div>
+        <!-- <div class="clone">
+          <span id="btnClone">&plus;</span>
+        </div> -->
+      </div>
+      <div class="global-controls">
+        <textarea rows="40" id="txtSource" spellcheck="false"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
